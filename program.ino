@@ -13,14 +13,18 @@ void setup() {
   attachInterrupt(0, parae, RISING);
   //stepper.setSpeed(50);
   lcd.begin(16, 2);
+  stepper.setSpeed(50);
+  Serial.begin(9600);
 
 }
 
 void loop() {
-  stepper.step(-200);
+  stepper.step(-200*flag);
   
-  stepper.setSpeed(flag*50);  
-  
+    
+  Serial.println(flag);
+//stepper.setSpeed(50);  
+
 //  if(!flag)
 //      lcd.print("Esteiras GENOMAX");
 //  else
