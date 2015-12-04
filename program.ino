@@ -108,11 +108,11 @@ void loop() {
 void tela(){
   if(!flag){                      // Se não detecta peça na esteira
     lcd.setRGB(100,0,0);          // Luz de fundo vermelho
-    lcd.print("Inserir peca!   ");
+    lcd.print("  Inserir peca!  ");
   }
   else{                           // Se estiver detectando notmalmente
     lcd.setRGB(255,255,255);      // Luz de fundo azul
-    lcd.print("Working well...");
+    lcd.print("Em funcionamento");
   }
   lcd.setCursor(0,1);
   lcd.print("Esteira GENOMAX");
